@@ -16,3 +16,5 @@ jobs:
 
       - name: Build CUDA Image
         run: go run -v dagger/main.go
+        env:
+          DAGGER_CLOUD_TOKEN: ${{ secrets.DAGGER_CLOUD_TOKEN }}
