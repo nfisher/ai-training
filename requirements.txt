@@ -1,0 +1,19 @@
+# PyTorch installation with specific extra index URL
+torch # --extra-index-url https://download.pytorch.org/whl/nvidia-cudnn-cu12
+
+# Installing unsloth from a GitHub repository with an extra option
+unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git
+
+# Installing additional packages without dependencies
+xformers
+trl
+peft
+accelerate
+bitsandbytes
+tensorboard
+absl-py
+grpcio
+markdown
+torchvision
+tensorboard-data-server<0.8.0,>=0.7.0
+werkzeug
