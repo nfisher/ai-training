@@ -16,7 +16,7 @@ func main() {
 
 	_, err = client.Host().
 		Directory(".").
-		DockerBuild().
+		DockerBuild(dagger.DirectoryDockerBuildOpts{Platform: "linux/amd64"}).
 		Publish(ctx, "nrfisher/pytorch-cuda:latest")
 	if err != nil {
 		panic(err)

@@ -1,0 +1,14 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    # assumes that the Dagger Cloud token is
+    # in a secret with key dagger_cloud_token
+    # set in AWS Secrets Manager
+    DAGGER_CLOUD_TOKEN: "arn:aws:secretsmanager:...:DAGGER_CLOUD_TOKEN"
+
+phases:
+  build:
+    commands:
+      - echo "Calling Dagger Function"
+      - go run dagger/main.go
