@@ -41,4 +41,4 @@ RUN apt-get update -y && \
     rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /app /app
-# COPY training/ /app
+COPY *.py /app
